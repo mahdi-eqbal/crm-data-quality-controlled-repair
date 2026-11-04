@@ -1,0 +1,35 @@
+{
+  "dataset": "wholly_synthetic",
+  "scope": "offline fixture-only",
+  "metrics": {
+    "contacts": {
+      "known_positive_pairs": 30,
+      "candidate_pairs": 41,
+      "known_positives_retrieved": 23,
+      "known_positive_recall_pct": 76.67,
+      "strong_evidence_pairs": 9,
+      "strong_evidence_known_positives": 9,
+      "strong_evidence_other_or_unlabeled": 0,
+      "hard_negative_pairs": 8,
+      "hard_negatives_flagged_for_review": 2,
+      "hard_negatives_misclassified_strong": 0
+    },
+    "companies": {
+      "known_positive_pairs": 15,
+      "candidate_pairs": 16,
+      "known_positives_retrieved": 15,
+      "known_positive_recall_pct": 100.0,
+      "strong_evidence_pairs": 10,
+      "strong_evidence_known_positives": 10,
+      "strong_evidence_other_or_unlabeled": 0,
+      "hard_negative_pairs": 3,
+      "hard_negatives_flagged_for_review": 1,
+      "hard_negatives_misclassified_strong": 0
+    }
+  },
+  "limitations": [
+    "Not an independent held-out dataset; generator patterns are known.",
+    "Unlabeled non-positive pairs may be ambiguous; precision is not reported.",
+    "Every candidate requires human review. No merge/repair can execute."
+  ]
+}

@@ -1,0 +1,2 @@
+# Offline fuzzy string comparison. No AI/API service required.
+rapidfuzz==3.14.6

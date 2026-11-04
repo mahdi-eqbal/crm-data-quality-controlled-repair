@@ -1,0 +1,21 @@
+name: M0 Offline Tests
+on:
+  push:
+  pull_request:
+jobs:
+  synthetic-fixture-tests:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.11', '3.13']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Generate synthetic fixtures
+        run: python scripts/generate_fixtures.py
+      - name: Run offline quality audit
+        run: python scripts/run_audit.py
+      - name: Run acceptance tests
+        run: python -m unittest discover -s tests -v

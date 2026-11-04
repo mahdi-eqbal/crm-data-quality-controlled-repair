@@ -1,0 +1,58 @@
+{
+  "record_counts": {
+    "contacts": 300,
+    "companies": 120,
+    "associations": 268
+  },
+  "contacts": {
+    "fields": {
+      "first_name": {
+        "missing": 0,
+        "completeness_pct": 100.0
+      },
+      "last_name": {
+        "missing": 0,
+        "completeness_pct": 100.0
+      },
+      "email": {
+        "missing": 26,
+        "completeness_pct": 91.33
+      },
+      "phone": {
+        "missing": 120,
+        "completeness_pct": 60.0
+      }
+    },
+    "invalid_nonempty_email": 9,
+    "email_with_surrounding_whitespace": 15,
+    "without_any_association": 33
+  },
+  "companies": {
+    "fields": {
+      "name": {
+        "missing": 0,
+        "completeness_pct": 100.0
+      },
+      "domain": {
+        "missing": 14,
+        "completeness_pct": 88.33
+      },
+      "country": {
+        "missing": 0,
+        "completeness_pct": 100.0
+      }
+    },
+    "invalid_nonempty_domain": 0
+  },
+  "associations": {
+    "dangling_count": 1,
+    "dangling_examples": [
+      {
+        "contact_id": "C0002",
+        "company_id": "O9999",
+        "association_type": "secondary"
+      }
+    ]
+  },
+  "important_note": "Baseline profiling only: no inferred duplicates, no merge proposals, no CRM writes."
+}

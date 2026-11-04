@@ -1,0 +1,10 @@
+{
+  "dataset": "wholly_synthetic",
+  "generator_seed": 20261104,
+  "contacts": 300,
+  "companies": 120,
+  "associations": 268,
+  "known_duplicate_contact_pairs": 30,
+  "known_duplicate_company_pairs": 15,
+  "contains_deliberate_invalid_association": true
+}

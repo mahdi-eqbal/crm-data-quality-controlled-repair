@@ -1,0 +1,21 @@
+{
+  "policy_version": "m0-0.1.0",
+  "environment": "synthetic_only",
+  "crm_system": "hubspot_test_account_later",
+  "writes_enabled": false,
+  "automatic_merges_enabled": false,
+  "human_approval_required_for_all_writes": true,
+  "allowed_objects_for_future_review": ["contact", "company"],
+  "allowlisted_patch_fields_future_only": {
+    "contact": ["firstname", "lastname", "phone"],
+    "company": ["name", "domain", "country"]
+  },
+  "protected_fields": ["email", "hs_object_id", "lifecyclestage", "hubspot_owner_id", "associations"],
+  "policy_notes": [
+    "All fields are protected from writes in M0 even if in a future allowlist.",
+    "Email and associations are reviewed but never automatically repaired in V1.",
+    "Allowlist does not imply safety: every proposed patch needs an approved change plan, a fresh preflight read and post-write verification.",
+    "Company legal identity and domain conflicts require review, not automatic normalization.",
+    "Merging is excluded from automated workflows, including synthetic demos."
+  ]
+}

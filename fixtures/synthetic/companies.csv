@@ -1,0 +1,121 @@
+record_id,name,domain,country,industry,updated_at
+O0072,Lumen Systems,lumen-systems.example,US,Research,2026-10-22T10:00:00Z
+O0060,Harbor Services,harbor-services.example,US,Research,2026-10-10T10:00:00Z
+O0075,Lumen Software,lumen-software.example,US,Manufacturing,2026-10-25T10:00:00Z
+O0018,Bluewater Health,bluewater-health.example,US,Services,2026-10-18T10:00:00Z
+O0046,Granite Logistics,granite-logistics.example,US,Services,2026-10-21T10:00:00Z
+O0085,Northfield Software,northfield-software.example,United States,Software,2026-10-10T10:00:00Z
+O0019,Bluewater Manufacturing,bluewater-manufacturing.example,US,Manufacturing,2026-10-19T10:00:00Z
+O0120,granite manufacturing,,United States,Software,2026-10-29T13:00:00Z
+O0102,Pinnacle Systems,pinnacle-systems.example,US,Services,2026-10-02T10:00:00Z
+O0032,Evergreen Systems,evergreen-systems.example,US,Research,2026-10-07T10:00:00Z
+O0039,Evergreen Manufacturing,evergreen-manufacturing.example,US,Manufacturing,2026-10-14T10:00:00Z
+O0026,Cedar Logistics,cedar-logistics.example,US,Services,2026-10-01T10:00:00Z
+O0066,Juniper Logistics,,US,Services,2026-10-16T10:00:00Z
+O0090,Northfield Services,northfield-services.example,US,Services,2026-10-15T10:00:00Z
+O0011,Bluewater Analytics,bluewater-analytics.example,US,Manufacturing,2026-10-11T10:00:00Z
+O0109,  BLUEWATER LOGISTICS ,bluewater-logistics.example,US,Research,2026-10-29T13:00:00Z
+O0063,Juniper Research,juniper-research.example,US,Manufacturing,2026-10-13T10:00:00Z
+O0100,Oakridge Services,oakridge-services.example,US,Research,2026-10-25T10:00:00Z
+O0101,Pinnacle Analytics,pinnacle-analytics.example,United States,Software,2026-10-01T10:00:00Z
+O0094,Oakridge Digital,oakridge-digital.example,US,Services,2026-10-19T10:00:00Z
+O0047,Granite Consulting,granite-consulting.example,US,Manufacturing,2026-10-22T10:00:00Z
+O0008,Amber Health,amber-health.example,US,Research,2026-10-08T10:00:00Z
+O0014,Bluewater Digital,,US,Services,2026-10-14T10:00:00Z
+O0097,Oakridge Consulting,oakridge-consulting.example,United States,Software,2026-10-22T10:00:00Z
+O0103,Pinnacle Research,pinnacle-research.example,US,Manufacturing,2026-10-03T10:00:00Z
+O0012,Bluewater Systems,bluewater-systems.example,US,Research,2026-10-12T10:00:00Z
+O0023,Cedar Research,cedar-research.example,US,Manufacturing,2026-10-23T10:00:00Z
+O0118,  GRANITE RESEARCH ,granite-research.example,US,Manufacturing,2026-10-29T13:00:00Z
+O0093,Oakridge Research,oakridge-research.example,United States,Software,2026-10-18T10:00:00Z
+O0006,Atlas Diagnostics,atlas-diagnostics.example,US,Services,2026-10-06T10:00:00Z
+O0117,evergreen services,,US,Research,2026-10-29T13:00:00Z
+O0107,Amber Services Ltd.,amber-services.example,US,Services,2026-10-29T13:00:00Z
+O0017,Bluewater Consulting,bluewater-consulting.example,United States,Software,2026-10-17T10:00:00Z
+O0056,Harbor Logistics,harbor-logistics.example,US,Research,2026-10-06T10:00:00Z
+O0009,Amber Manufacturing,amber-manufacturing.example,United States,Software,2026-10-09T10:00:00Z
+O0044,Granite Digital,granite-digital.example,US,Research,2026-10-19T10:00:00Z
+O0022,Cedar Systems,cedar-systems.example,US,Services,2026-10-22T10:00:00Z
+O0040,Evergreen Services,,US,Research,2026-10-15T10:00:00Z
+O0033,Evergreen Research,evergreen-research.example,United States,Software,2026-10-08T10:00:00Z
+O0007,Amber Consulting,amber-consulting.example,US,Manufacturing,2026-10-07T10:00:00Z
+O0113,Cedar Health Ltd.,cedar-health.example,US,Research,2026-10-29T13:00:00Z
+O0108,bluewater research,,United States,Software,2026-10-29T13:00:00Z
+O0062,Juniper Systems,juniper-systems.example,US,Services,2026-10-12T10:00:00Z
+O0078,Lumen Health,lumen-health.example,US,Services,2026-10-03T10:00:00Z
+O0073,Lumen Research,lumen-research.example,United States,Software,2026-10-23T10:00:00Z
+O0036,Evergreen Logistics,evergreen-logistics.example,US,Research,2026-10-11T10:00:00Z
+O0087,Northfield Consulting,northfield-consulting.example,US,Manufacturing,2026-10-12T10:00:00Z
+O0035,Evergreen Software,evergreen-software.example,US,Manufacturing,2026-10-10T10:00:00Z
+O0112,  CEDAR SOFTWARE ,cedar-software.example,United States,Software,2026-10-29T13:00:00Z
+O0116,Evergreen Consulting Ltd.,evergreen-consulting.example,United States,Software,2026-10-29T13:00:00Z
+O0057,Harbor Consulting,harbor-consulting.example,United States,Software,2026-10-07T10:00:00Z
+O0110,Bluewater Manufacturing Ltd.,bluewater-manufacturing.example,US,Manufacturing,2026-10-29T13:00:00Z
+O0106,  AMBER CONSULTING ,amber-consulting.example,US,Manufacturing,2026-10-29T13:00:00Z
+O0051,Harbor Analytics,harbor-analytics.example,US,Manufacturing,2026-10-01T10:00:00Z
+O0034,Evergreen Digital,evergreen-digital.example,US,Services,2026-10-09T10:00:00Z
+O0052,Harbor Systems,harbor-systems.example,US,Research,2026-10-02T10:00:00Z
+O0055,Harbor Software,harbor-software.example,US,Manufacturing,2026-10-05T10:00:00Z
+O0043,Granite Research,granite-research.example,US,Manufacturing,2026-10-18T10:00:00Z
+O0053,Harbor Research,,United States,Software,2026-10-03T10:00:00Z
+O0016,Bluewater Logistics,bluewater-logistics.example,US,Research,2026-10-16T10:00:00Z
+O0013,Bluewater Research,bluewater-research.example,United States,Software,2026-10-13T10:00:00Z
+O0074,Lumen Digital,lumen-digital.example,US,Services,2026-10-24T10:00:00Z
+O0025,Cedar Software,cedar-software.example,United States,Software,2026-10-25T10:00:00Z
+O0082,Northfield Systems,northfield-systems.example,US,Services,2026-10-07T10:00:00Z
+O0045,Granite Software,granite-software.example,United States,Software,2026-10-20T10:00:00Z
+O0002,Northstar Systemics,northstar-systemics.example,US,Services,2026-10-02T10:00:00Z
+O0067,Juniper Consulting,juniper-consulting.example,US,Manufacturing,2026-10-17T10:00:00Z
+O0119,Granite Logistics Ltd.,granite-logistics.example,US,Services,2026-10-29T13:00:00Z
+O0077,Lumen Consulting,lumen-consulting.example,United States,Software,2026-10-02T10:00:00Z
+O0079,Lumen Manufacturing,,US,Manufacturing,2026-10-04T10:00:00Z
+O0005,Atlas Digital,atlas-digital.example,United States,Software,2026-10-05T10:00:00Z
+O0029,Cedar Manufacturing,cedar-manufacturing.example,United States,Software,2026-10-04T10:00:00Z
+O0020,Bluewater Services,bluewater-services.example,US,Research,2026-10-20T10:00:00Z
+O0098,Oakridge Health,oakridge-health.example,US,Services,2026-10-23T10:00:00Z
+O0054,Harbor Digital,harbor-digital.example,US,Services,2026-10-04T10:00:00Z
+O0024,Cedar Digital,cedar-digital.example,US,Research,2026-10-24T10:00:00Z
+O0086,Northfield Logistics,northfield-logistics.example,US,Services,2026-10-11T10:00:00Z
+O0099,Oakridge Manufacturing,oakridge-manufacturing.example,US,Manufacturing,2026-10-24T10:00:00Z
+O0069,Juniper Manufacturing,juniper-manufacturing.example,United States,Software,2026-10-19T10:00:00Z
+O0111,cedar systems,,US,Services,2026-10-29T13:00:00Z
+O0083,Northfield Research,northfield-research.example,US,Manufacturing,2026-10-08T10:00:00Z
+O0068,Juniper Health,juniper-health.example,US,Research,2026-10-18T10:00:00Z
+O0115,  EVERGREEN DIGITAL ,evergreen-digital.example,US,Services,2026-10-29T13:00:00Z
+O0065,Juniper Software,juniper-software.example,United States,Software,2026-10-15T10:00:00Z
+O0096,Oakridge Logistics,oakridge-logistics.example,US,Research,2026-10-21T10:00:00Z
+O0041,Granite Analytics,granite-analytics.example,United States,Software,2026-10-16T10:00:00Z
+O0092,Oakridge Systems,,US,Research,2026-10-17T10:00:00Z
+O0028,Cedar Health,cedar-health.example,US,Research,2026-10-03T10:00:00Z
+O0038,Evergreen Health,evergreen-health.example,US,Services,2026-10-13T10:00:00Z
+O0104,Pinnacle Digital,pinnacle-digital.example,US,Research,2026-10-04T10:00:00Z
+O0037,Evergreen Consulting,evergreen-consulting.example,United States,Software,2026-10-12T10:00:00Z
+O0015,Bluewater Software,bluewater-software.example,US,Manufacturing,2026-10-15T10:00:00Z
+O0031,Evergreen Analytics,evergreen-analytics.example,US,Manufacturing,2026-10-06T10:00:00Z
+O0091,Oakridge Analytics,oakridge-analytics.example,US,Manufacturing,2026-10-16T10:00:00Z
+O0061,Juniper Analytics,juniper-analytics.example,United States,Software,2026-10-11T10:00:00Z
+O0071,Lumen Analytics,lumen-analytics.example,US,Manufacturing,2026-10-21T10:00:00Z
+O0021,Cedar Analytics,cedar-analytics.example,United States,Software,2026-10-21T10:00:00Z
+O0088,Northfield Health,northfield-health.example,US,Research,2026-10-13T10:00:00Z
+O0058,Harbor Health,harbor-health.example,US,Services,2026-10-08T10:00:00Z
+O0004,Pioneer Logistics,pioneer-logistics.example,US,Research,2026-10-04T10:00:00Z
+O0049,Granite Manufacturing,granite-manufacturing.example,United States,Software,2026-10-24T10:00:00Z
+O0059,Harbor Manufacturing,harbor-manufacturing.example,US,Manufacturing,2026-10-09T10:00:00Z
+O0010,Amber Services,amber-services.example,US,Services,2026-10-10T10:00:00Z
+O0089,Northfield Manufacturing,northfield-manufacturing.example,United States,Software,2026-10-14T10:00:00Z
+O0080,Lumen Services,lumen-services.example,US,Research,2026-10-05T10:00:00Z
+O0105,Pinnacle Software,,United States,Software,2026-10-05T10:00:00Z
+O0114,evergreen analytics,,US,Manufacturing,2026-10-29T13:00:00Z
+O0070,Juniper Services,juniper-services.example,US,Services,2026-10-20T10:00:00Z
+O0084,Northfield Digital,northfield-digital.example,US,Research,2026-10-09T10:00:00Z
+O0001,Northstar Systems,,United States,Software,2026-10-01T10:00:00Z
+O0050,Granite Services,granite-services.example,US,Services,2026-10-25T10:00:00Z
+O0030,Cedar Services,cedar-services.example,US,Services,2026-10-05T10:00:00Z
+O0003,Pioneer Labs,pioneer-labs.example,US,Manufacturing,2026-10-03T10:00:00Z
+O0076,Lumen Logistics,lumen-logistics.example,US,Research,2026-10-01T10:00:00Z
+O0064,Juniper Digital,juniper-digital.example,US,Research,2026-10-14T10:00:00Z
+O0048,Granite Health,granite-health.example,US,Research,2026-10-23T10:00:00Z
+O0042,Granite Systems,granite-systems.example,US,Services,2026-10-17T10:00:00Z
+O0027,Cedar Consulting,,US,Manufacturing,2026-10-02T10:00:00Z
+O0081,Northfield Analytics,northfield-analytics.example,United States,Software,2026-10-06T10:00:00Z
+O0095,Oakridge Software,oakridge-software.example,US,Manufacturing,2026-10-20T10:00:00Z

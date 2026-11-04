@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Repair proposal (design-time contract, not yet executed)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["proposal_id", "source_system", "object_type", "record_id", "field", "old_value", "proposed_value", "reason_code", "risk", "snapshot_hash", "policy_version", "status"],
+  "properties": {
+    "proposal_id": {"type": "string", "minLength": 1},
+    "source_system": {"const": "hubspot"},
+    "object_type": {"enum": ["contact", "company"]},
+    "record_id": {"type": "string", "minLength": 1},
+    "field": {"type": "string", "minLength": 1},
+    "old_value": {"type": ["string", "null"]},
+    "proposed_value": {"type": ["string", "null"]},
+    "reason_code": {"type": "string", "minLength": 1},
+    "risk": {"enum": ["low", "medium", "high"]},
+    "snapshot_hash": {"type": "string", "minLength": 1},
+    "policy_version": {"type": "string", "minLength": 1},
+    "status": {"enum": ["proposed", "pending_review", "approved", "rejected", "expired", "preflight", "applied", "verified", "conflict", "failed"]},
+    "approved_by": {"type": ["string", "null"]},
+    "approved_at": {"type": ["string", "null"], "format": "date-time"}
+  }
+}

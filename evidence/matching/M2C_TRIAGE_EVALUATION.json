@@ -1,0 +1,90 @@
+{
+  "scope": "M2c synthetic-only, offline diagnostic",
+  "engine": "M2a detection unchanged; new routing/weak-hint layer only",
+  "m0": {
+    "intentional_contact_positives": 30,
+    "baseline_detected": 23,
+    "name_only_exploratory_positive_hints": 1,
+    "name_only_hints_total": 114,
+    "note": "Unlabeled M0 name collisions prevent valid hint precision estimates."
+  },
+  "challenge": {
+    "contacts": {
+      "baseline_candidate_metrics_unchanged": {
+        "records": 16,
+        "all_unordered_pairs": 120,
+        "true_positive": 2,
+        "false_positive": 2,
+        "false_negative": 3,
+        "true_negative": 113,
+        "candidate_precision_pct": 50.0,
+        "candidate_recall_pct": 40.0,
+        "strong_evidence_count": 1,
+        "strong_false_positives": 0,
+        "review_false_positives": 2,
+        "distinct_group_pairs_wrongly_flagged_for_review": 2,
+        "note": "Pair metrics apply only to THIS small, fully-labeled synthetic challenge set; not customer-data estimates."
+      },
+      "routed_candidates": {
+        "needs_external_evidence": {
+          "count": 2,
+          "labeled_same_entity": 0,
+          "labeled_distinct": 2
+        },
+        "priority_review": {
+          "count": 1,
+          "labeled_same_entity": 1,
+          "labeled_distinct": 0
+        },
+        "standard_review": {
+          "count": 1,
+          "labeled_same_entity": 1,
+          "labeled_distinct": 0
+        }
+      },
+      "exploratory_hints": {
+        "exploratory_only": {
+          "count": 4,
+          "labeled_same_entity": 3,
+          "labeled_distinct": 1
+        }
+      }
+    },
+    "companies": {
+      "baseline_candidate_metrics_unchanged": {
+        "records": 11,
+        "all_unordered_pairs": 55,
+        "true_positive": 2,
+        "false_positive": 2,
+        "false_negative": 0,
+        "true_negative": 51,
+        "candidate_precision_pct": 50.0,
+        "candidate_recall_pct": 100.0,
+        "strong_evidence_count": 1,
+        "strong_false_positives": 0,
+        "review_false_positives": 2,
+        "distinct_group_pairs_wrongly_flagged_for_review": 2,
+        "note": "Pair metrics apply only to THIS small, fully-labeled synthetic challenge set; not customer-data estimates."
+      },
+      "routed_candidates": {
+        "needs_external_evidence": {
+          "count": 3,
+          "labeled_same_entity": 1,
+          "labeled_distinct": 2
+        },
+        "priority_review": {
+          "count": 1,
+          "labeled_same_entity": 1,
+          "labeled_distinct": 0
+        }
+      }
+    }
+  },
+  "limitations": [
+    "M2b challenge authored with knowledge of M2a; not independent held-out validation.",
+    "M2c routes were designed after inspecting M2b errors: selection bias applies.",
+    "Exploratory hints are not validated duplicates or eligible for CRM actions.",
+    "Strong evidence still needs human review; no merges or patches occur.",
+    "No CRM, Make, Airtable, AI or PostgreSQL access."
+  ]
+}

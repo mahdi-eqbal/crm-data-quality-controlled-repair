@@ -1,0 +1,20 @@
+# Local development database; not for production or customer data.
+services:
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${PGUSER:-crm_quality}
+      POSTGRES_DB: ${PGDATABASE:-crm_data_quality}
+      POSTGRES_PASSWORD: ${PGPASSWORD:?Set a strong PGPASSWORD in local .env}
+    ports:
+      - '127.0.0.1:5433:5432'
+    volumes:
+      - crm_quality_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U "$${POSTGRES_USER}" -d "$${POSTGRES_DB}"']
+      interval: 5s
+      timeout: 3s
+      retries: 10
+volumes:
+  crm_quality_pgdata:

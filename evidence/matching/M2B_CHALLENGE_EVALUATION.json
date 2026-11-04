@@ -1,0 +1,118 @@
+{
+  "scope": "M2b offline synthetic-only diagnostic; NO CRM/DB calls or changes",
+  "engine": "unchanged M2a engine (no thresholds tuned against labels)",
+  "m0_missed_positive_diagnostics": {
+    "positive_pairs_labeled": 30,
+    "retrieved_positive_pairs": 23,
+    "missed_pairs": 7,
+    "failure_reason_counts": {
+      "different_emails_without_independent_evidence": 3,
+      "insufficient_independent_evidence_missing_email": 4
+    },
+    "details": [
+      {
+        "record_ids": [
+          "C0025",
+          "C0275"
+        ],
+        "was_blocked": true,
+        "names_normalize_equal": true,
+        "reason": "insufficient_independent_evidence_missing_email"
+      },
+      {
+        "record_ids": [
+          "C0034",
+          "C0278"
+        ],
+        "was_blocked": true,
+        "names_normalize_equal": true,
+        "reason": "insufficient_independent_evidence_missing_email"
+      },
+      {
+        "record_ids": [
+          "C0037",
+          "C0279"
+        ],
+        "was_blocked": true,
+        "names_normalize_equal": true,
+        "reason": "different_emails_without_independent_evidence"
+      },
+      {
+        "record_ids": [
+          "C0061",
+          "C0287"
+        ],
+        "was_blocked": true,
+        "names_normalize_equal": true,
+        "reason": "insufficient_independent_evidence_missing_email"
+      },
+      {
+        "record_ids": [
+          "C0073",
+          "C0291"
+        ],
+        "was_blocked": true,
+        "names_normalize_equal": true,
+        "reason": "different_emails_without_independent_evidence"
+      },
+      {
+        "record_ids": [
+          "C0097",
+          "C0299"
+        ],
+        "was_blocked": true,
+        "names_normalize_equal": true,
+        "reason": "insufficient_independent_evidence_missing_email"
+      },
+      {
+        "record_ids": [
+          "C0100",
+          "C0300"
+        ],
+        "was_blocked": true,
+        "names_normalize_equal": true,
+        "reason": "different_emails_without_independent_evidence"
+      }
+    ],
+    "explanation": "A matching name alone does not prove a shared identity. These are not safe auto-merge cases."
+  },
+  "m2b_challenge": {
+    "contacts": {
+      "records": 16,
+      "all_unordered_pairs": 120,
+      "true_positive": 2,
+      "false_positive": 2,
+      "false_negative": 3,
+      "true_negative": 113,
+      "candidate_precision_pct": 50.0,
+      "candidate_recall_pct": 40.0,
+      "strong_evidence_count": 1,
+      "strong_false_positives": 0,
+      "review_false_positives": 2,
+      "distinct_group_pairs_wrongly_flagged_for_review": 2,
+      "note": "Pair metrics apply only to THIS small, fully-labeled synthetic challenge set; not customer-data estimates."
+    },
+    "companies": {
+      "records": 11,
+      "all_unordered_pairs": 55,
+      "true_positive": 2,
+      "false_positive": 2,
+      "false_negative": 0,
+      "true_negative": 51,
+      "candidate_precision_pct": 50.0,
+      "candidate_recall_pct": 100.0,
+      "strong_evidence_count": 1,
+      "strong_false_positives": 0,
+      "review_false_positives": 2,
+      "distinct_group_pairs_wrongly_flagged_for_review": 2,
+      "note": "Pair metrics apply only to THIS small, fully-labeled synthetic challenge set; not customer-data estimates."
+    }
+  },
+  "limitations": [
+    "Challenge data were authored with knowledge of M2a rules; this is NOT a blinded held-out sample.",
+    "The full-pair labels in the small challenge permit precision/recall for this specific constructed dataset only.",
+    "Original M0 only labels selected pairs and cannot support a full-dataset precision estimate.",
+    "No customer or production performance is measured; no AI; no automatic merge or write.",
+    "A candidate is a manual-review suggestion, not an assertion that records are identical."
+  ]
+}

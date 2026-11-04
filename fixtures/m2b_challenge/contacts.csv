@@ -1,0 +1,17 @@
+record_id,first_name,last_name,email,phone
+XCT01,Ava,Stone,ava.stone@north.example,
+XCT02,AVA,STONE, AVA.STONE@north.example ,
+XCT03,Lia,Chen,lia.chen@domain.example,
+XCT04,Lia,Chne,lia.chen@domain.example,
+XCT05,Milo,Park,milo.park@first.example,
+XCT06,Milo,Park,milo.p@second.example,
+XCT07,Noah,Fox,,
+XCT08,Noah,Fox,,
+XCT09,Alex,Kim,alex.kim9@first.example,
+XCT10,Alex,Kim,alex.kim10@second.example,
+XCT11,Office,Admin,operations@shared.example,
+XCT12,Sales,Desk,operations@shared.example,
+XCT13,Nora,Lane,nora.lane@one.example,+1 202 555 0101
+XCT14,Nora,Lane,nora.lane@two.example,(202) 555-0101
+XCT15,Riley,Ford,riley.ford@one.example,
+XCT16,Riley,Ford,riley.ford@two.example,

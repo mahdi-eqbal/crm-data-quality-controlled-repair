@@ -1,0 +1,36 @@
+{
+  "dataset": "synthetic_m2b_complete_identity_groups",
+  "status": "fully_adjudicated_by_construction",
+  "contact_identity_groups": {
+    "XCT01": "person_ava",
+    "XCT02": "person_ava",
+    "XCT03": "person_lia",
+    "XCT04": "person_lia",
+    "XCT05": "person_milo",
+    "XCT06": "person_milo",
+    "XCT07": "person_noah",
+    "XCT08": "person_noah",
+    "XCT09": "person_alex1",
+    "XCT10": "person_alex2",
+    "XCT11": "person_ops1",
+    "XCT12": "person_ops2",
+    "XCT13": "person_nora",
+    "XCT14": "person_nora",
+    "XCT15": "person_riley1",
+    "XCT16": "person_riley2"
+  },
+  "company_identity_groups": {
+    "XCO01": "entity_acme",
+    "XCO02": "entity_acme",
+    "XCO03": "entity_northstar_holding",
+    "XCO04": "entity_northstar_venture",
+    "XCO05": "entity_meridian1",
+    "XCO06": "entity_meridian2",
+    "XCO07": "entity_cedar",
+    "XCO08": "entity_cedar",
+    "XCO09": "entity_riverpoint",
+    "XCO10": "entity_riverside",
+    "XCO11": "entity_shared_workspace"
+  },
+  "notice": "Only evaluation uses this file. All cross-group pairs are explicitly different entities within this synthetic benchmark. Designed after M2a; NOT a blinded or representative production test."
+}

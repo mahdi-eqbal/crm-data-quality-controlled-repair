@@ -1,0 +1,18 @@
+{
+  "milestone": "M5a",
+  "status": "offline_unit_and_integration_tests_only",
+  "scope": "HubSpot developer test read-only observation against latest verified local M1b baseline",
+  "verified_local_tests": 253,
+  "new_m5a_tests": 29,
+  "hubspot_live_test_performed": false,
+  "local_postgresql_live_test_performed": false,
+  "max_logical_http_get_calls_per_run": 13,
+  "max_contact_or_company_records_per_object": 10,
+  "approval_granted": false,
+  "write_authorized": false,
+  "crm_writes": 0,
+  "postgres_writes": 0,
+  "airtable_writes": 0,
+  "merges": 0,
+  "note": "Source and association drift checks are observational, non-atomic, and grant no permission to repair real CRM data."
+}

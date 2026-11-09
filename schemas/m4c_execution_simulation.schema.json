@@ -1,0 +1,80 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "M4c synthetic-only non-authorizing in-memory execution plan and demonstration",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["execution_plan", "demo_result"],
+  "properties": {
+    "execution_plan": {
+      "type": "object", "additionalProperties": false,
+      "required": ["schema_version", "version", "source_type", "m4b_gate_plan_sha256", "counts", "operations", "guarantees", "execution_plan_sha256"],
+      "properties": {
+        "schema_version": {"const": "m4c-1"},
+        "version": {"const": "m4c-synthetic-inmemory-execution-v1"},
+        "source_type": {"const": "synthetic_fixture_only"},
+        "m4b_gate_plan_sha256": {"$ref": "#/$defs/sha"},
+        "execution_plan_sha256": {"$ref": "#/$defs/sha"},
+        "counts": {
+          "type": "object", "additionalProperties": false,
+          "required": ["requests", "mock_gate_required", "held_duplicate_dependency", "actual_approvals"],
+          "properties": {"requests": {"const": 31}, "mock_gate_required": {"const": 22},
+            "held_duplicate_dependency": {"const": 9}, "actual_approvals": {"const": 0}}
+        },
+        "operations": {
+          "type": "array", "minItems": 31, "maxItems": 31,
+          "items": {
+            "type": "object", "additionalProperties": false,
+            "required": ["request_id", "request_sha256", "source_record_id", "field", "old_value", "proposed_value", "status", "source_record_sha256", "associations_sha256", "write_authorized", "merge_authorized"],
+            "properties": {
+              "request_id": {"type": "string", "format": "uuid"},
+              "request_sha256": {"$ref": "#/$defs/sha"},
+              "source_record_id": {"type": "string", "pattern": "^O[0-9]{4}$"},
+              "field": {"const": "country"},
+              "old_value": {"const": "United States"},
+              "proposed_value": {"const": "US"},
+              "status": {"enum": ["mock_gate_required", "held_duplicate_dependency"]},
+              "source_record_sha256": {"$ref": "#/$defs/sha"},
+              "associations_sha256": {"$ref": "#/$defs/sha"},
+              "write_authorized": {"const": false}, "merge_authorized": {"const": false}
+            }
+          }
+        },
+        "guarantees": {
+          "type": "object", "additionalProperties": false,
+          "required": ["crm_writes", "postgres_writes", "airtable_writes", "merges", "real_approvals", "source_files_written"],
+          "properties": {"crm_writes": {"const": 0}, "postgres_writes": {"const": 0},
+            "airtable_writes": {"const": 0}, "merges": {"const": 0},
+            "real_approvals": {"const": 0}, "source_files_written": {"const": 0}}
+        }
+      }
+    },
+    "demo_result": {
+      "type": "object", "additionalProperties": false,
+      "required": ["schema_version", "source_type", "execution_plan_sha256", "request_counts", "scenarios", "source_fixture_unchanged", "associations_unchanged", "actual_approvals", "crm_writes", "postgres_writes", "airtable_writes", "merges"],
+      "properties": {
+        "schema_version": {"const": "m4c-demo-1"},
+        "source_type": {"const": "synthetic_fixture_only"},
+        "execution_plan_sha256": {"$ref": "#/$defs/sha"},
+        "request_counts": {"type": "object"},
+        "scenarios": {
+          "type": "object", "additionalProperties": false,
+          "required": ["happy_path_verified", "idempotent_replay", "happy_path_compensated", "stale_before_write_blocked", "partial_failure_injected", "partial_changes_compensated", "rollback_conflict_detected"],
+          "properties": {
+            "happy_path_verified": {"const": 1},
+            "idempotent_replay": {"const": 1},
+            "happy_path_compensated": {"const": 1},
+            "stale_before_write_blocked": {"const": 1},
+            "partial_failure_injected": {"const": 1},
+            "partial_changes_compensated": {"const": 2},
+            "rollback_conflict_detected": {"const": 1}
+          }
+        },
+        "source_fixture_unchanged": {"const": true},
+        "associations_unchanged": {"const": true},
+        "actual_approvals": {"const": 0}, "crm_writes": {"const": 0},
+        "postgres_writes": {"const": 0}, "airtable_writes": {"const": 0}, "merges": {"const": 0}
+      }
+    }
+  },
+  "$defs": {"sha": {"type": "string", "pattern": "^[a-f0-9]{64}$"}}
+}

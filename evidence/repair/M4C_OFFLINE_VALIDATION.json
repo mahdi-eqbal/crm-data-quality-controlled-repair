@@ -1,0 +1,25 @@
+{
+  "milestone": "M4c",
+  "scope": "synthetic_fixture_only",
+  "validation_environment": "isolated compatibility harness with stubbed M4a/M4b dependencies",
+  "new_tests_passed_in_harness": 42,
+  "new_tests_failed_in_harness": 0,
+  "previous_project_tests_last_reported_by_user": 182,
+  "full_repository_suite_status": "NOT_RUN_IN_THIS_ENVIRONMENT",
+  "expected_total_after_install_if_unchanged": 224,
+  "integration_acceptance_required_on_users_windows_checkout": true,
+  "simulation_contract": {
+    "m4b_requests_expected": 31,
+    "eligible_mock_gate_only": 22,
+    "held_duplicate_dependencies": 9,
+    "happy_path_mock_verified": true,
+    "identical_attempt_replayed_without_double_change": true,
+    "stale_between_preflight_and_mutation_blocked": true,
+    "partial_failure_after_two_simulated_edits_compensated": true,
+    "postwrite_compensation_conflict_escalated": true,
+    "durable_approval_or_live_execution_claim": false
+  },
+  "external_writes": {"hubspot": 0, "airtable": 0, "postgresql": 0, "merges": 0},
+  "actual_approvals": 0,
+  "disclaimer": "No live HubSpot API call, authenticated approval, durable transaction, or real rollback was exercised. Full repository tests must pass separately."
+}

@@ -1,0 +1,21 @@
+{
+  "milestone": "M3c",
+  "validation_type": "offline_unit_tests_and_uploaded_synthetic_csv_contract",
+  "tests_added": 23,
+  "tests_passed": 23,
+  "tests_failed": 0,
+  "dataset": "wholly_synthetic",
+  "source_candidates": 57,
+  "blank_airtable_template_rows_allowed": 3,
+  "sample_imported_decisions": 0,
+  "new_live_airtable_api_calls_by_local_script": 0,
+  "postgresql_integration_tested": false,
+  "reviewer_decision_round_trip_tested": false,
+  "crm_writes_performed": 0,
+  "crm_merges_performed": 0,
+  "limitations": [
+    "Local PostgreSQL and the user's personal read-only Airtable token were not available in this offline validation environment.",
+    "The 23 tests cover mocked Airtable reads and mocked decision-journal application, not a production-grade integration certification.",
+    "Reviewer Last Modified By is Airtable provenance, not cryptographic attestation."
+  ]
+}

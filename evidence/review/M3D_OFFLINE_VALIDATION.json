@@ -1,0 +1,33 @@
+{
+  "milestone": "M3d",
+  "validation_method": "offline synthetic fixtures and in-memory fake PostgreSQL/Airtable snapshots; no network, no real user database",
+  "test_command": "python -m unittest discover -s tests -q",
+  "tests_total": 124,
+  "tests_added_m3d": 26,
+  "offline_tests_passed": true,
+  "synthetic_two_revision_scenario": {
+    "candidates": 57,
+    "airtable_decisions": 1,
+    "postgres_events": 2,
+    "postgres_classified_candidates": 1,
+    "postgres_revisions": 1,
+    "summary": {
+      "in_sync": 1,
+      "not_reviewed": 56,
+      "pending_import": 0,
+      "cleared_in_airtable": 0,
+      "stale_airtable": 0,
+      "same_timestamp_conflict": 0
+    },
+    "reconciled": true,
+    "policy": "read_only_no_crm_writes_no_automatic_resolution"
+  },
+  "no_hubspot_calls": true,
+  "no_postgres_or_airtable_writes": true,
+  "not_verified": [
+    "real Airtable read by M3d script",
+    "real local PostgreSQL reconciliation run",
+    "GitHub upload of M3d patch"
+  ],
+  "next_acceptance_step": "user runs py scripts\\m3d_reconcile.py --check against existing local environment"
+}

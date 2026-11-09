@@ -1,27 +1,31 @@
-name: M0-M2 Offline Tests
+name: Offline Tests (manual, cost-controlled)
 on:
-  push:
-  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: offline-tests-${{ github.ref }}
+  cancel-in-progress: true
 jobs:
-  synthetic-fixture-tests:
+  offline-tests:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        python-version: ['3.11', '3.13']
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
-          python-version: ${{ matrix.python-version }}
+          python-version: '3.13'
       - name: Install offline matching dependency
         run: python -m pip install -r requirements-m2.txt
-      - name: Generate synthetic fixtures
+      - name: Regenerate synthetic fixtures
         run: python scripts/generate_fixtures.py
-      - name: Run offline quality audit
-        run: python scripts/run_audit.py
-      - name: Run offline matching and evaluation
+      - name: Verify baseline fixture and matching
         run: |
+          python scripts/run_audit.py
           python scripts/m2_match_synthetic.py
           python scripts/m2_evaluate_synthetic.py
-      - name: Run acceptance tests
+          python scripts/m2b_diagnose_and_benchmark.py
+          python scripts/m2c_review_triage.py
+          python scripts/m2c_evaluate_triage.py
+      - name: Unit tests (no network or database required)
         run: python -m unittest discover -s tests -v

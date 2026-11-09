@@ -1,0 +1,21 @@
+{
+  "phase": "M3a",
+  "dataset": "wholly_synthetic",
+  "source_fingerprint": "c6154a4ac289b284651324bf3e526efb17c96da52a4c0923bfc6fb69ec280b6c",
+  "rule_version": "m2c-v1",
+  "candidate_count": 57,
+  "queue_statuses": {
+    "needs_evidence": 7,
+    "pending_review": 50
+  },
+  "routes": {
+    "needs_external_evidence": 7,
+    "priority_review": 19,
+    "standard_review": 31
+  },
+  "exploratory_hints_excluded": 114,
+  "crm_writes": 0,
+  "merge_enabled": false,
+  "approvals_implemented": false,
+  "note": "Offline aggregate planning evidence, not proof of PostgreSQL execution or reviewer approval."
+}

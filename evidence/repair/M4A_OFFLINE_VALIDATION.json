@@ -1,0 +1,38 @@
+{
+  "milestone": "M4a",
+  "test_environment": "offline_local_synthetic_fixture_only",
+  "status": "offline_passed_live_environment_not_yet_validated",
+  "baseline_unit_tests": 124,
+  "new_unit_tests": 23,
+  "total_unit_tests": 147,
+  "test_result": "OK",
+  "source_counts": {
+    "companies": 120,
+    "duplicate_candidate_pairs": 57
+  },
+  "repair_rule": {
+    "object_type": "company",
+    "field": "country",
+    "old_value": "United States",
+    "proposed_value": "US",
+    "rule_version": "m4a-company-country-us-v1"
+  },
+  "dry_run_counts": {
+    "detected_opportunities": 31,
+    "reviewable_dry_run": 22,
+    "held_duplicate_dependency": 9,
+    "not_applicable": 89,
+    "simulated_changes": 22,
+    "exact_rollback_verified": true,
+    "relationships_unchanged": true
+  },
+  "plan_sha256": "730fb9961635768dd9c09ca4f16a6204f031ba91f87f297f81840b74dd155044",
+  "schema_validation": "passed_in_build_environment",
+  "data_exposure": "No customer data, secrets, or CRM record content in evidence",
+  "crm_writes": 0,
+  "postgres_writes": 0,
+  "airtable_writes": 0,
+  "merges": 0,
+  "approval_grants": 0,
+  "note": "This file records offline fixture validation, not execution on the user's Windows PostgreSQL or HubSpot account."
+}

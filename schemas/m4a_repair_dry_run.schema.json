@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "M4a synthetic-only repair preview (no authority for CRM write)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "source_type", "rule_version", "policy_version", "source_fingerprint", "review_batch_id", "counts", "proposals", "guarantees", "simulation", "plan_sha256"],
+  "properties": {
+    "schema_version": {"const": "m4a-1"},
+    "source_type": {"const": "synthetic_fixture_only"},
+    "rule_version": {"const": "m4a-company-country-us-v1"},
+    "policy_version": {"type": "string", "minLength": 1},
+    "source_fingerprint": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "review_batch_id": {"type": "string", "format": "uuid"},
+    "plan_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "counts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["companies_scanned", "candidate_pairs_checked", "country_normalization_opportunities", "reviewable_dry_run", "held_duplicate_dependency", "not_applicable"],
+      "properties": {
+        "companies_scanned": {"const": 120},
+        "candidate_pairs_checked": {"const": 57},
+        "country_normalization_opportunities": {"type": "integer", "minimum": 0},
+        "reviewable_dry_run": {"type": "integer", "minimum": 0},
+        "held_duplicate_dependency": {"type": "integer", "minimum": 0},
+        "not_applicable": {"type": "integer", "minimum": 0}
+      }
+    },
+    "proposals": {
+      "type": "array",
+      "maxItems": 120,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["proposal_id", "source_type", "source_record_id", "object_type", "field", "old_value", "proposed_value", "reason_code", "risk", "status", "hold_reason", "dependency_candidate_keys", "association_count", "source_record_sha256", "rollback_value", "write_authorized", "merge_authorized"],
+        "properties": {
+          "proposal_id": {"type": "string", "format": "uuid"},
+          "source_type": {"const": "synthetic_fixture_only"},
+          "source_record_id": {"type": "string", "pattern": "^O[0-9]{4}$"},
+          "object_type": {"const": "company"},
+          "field": {"const": "country"},
+          "old_value": {"const": "United States"},
+          "proposed_value": {"const": "US"},
+          "reason_code": {"const": "normalize_country_name_to_iso_alpha2"},
+          "risk": {"enum": ["low", "medium"]},
+          "status": {"enum": ["reviewable_dry_run", "held_duplicate_dependency"]},
+          "hold_reason": {"type": ["string", "null"]},
+          "dependency_candidate_keys": {"type": "array", "items": {"type": "string", "pattern": "^companies:O[0-9]{4}:O[0-9]{4}$"}},
+          "association_count": {"type": "integer", "minimum": 0},
+          "source_record_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+          "rollback_value": {"const": "United States"},
+          "write_authorized": {"const": false},
+          "merge_authorized": {"const": false}
+        }
+      }
+    },
+    "guarantees": {
+      "type": "object", "additionalProperties": {"const": 0},
+      "required": ["crm_writes", "postgres_writes", "airtable_writes", "merges", "approvals_granted", "protected_fields_changed", "associations_changed"]
+    },
+    "simulation": {
+      "type": "object", "additionalProperties": false,
+      "required": ["simulated_country_changes", "simulated_rollback_exact", "associations_unchanged", "original_company_rows_unchanged", "source_files_written"],
+      "properties": {
+        "simulated_country_changes": {"type": "integer", "minimum": 0},
+        "simulated_rollback_exact": {"const": true},
+        "associations_unchanged": {"const": true},
+        "original_company_rows_unchanged": {"const": true},
+        "source_files_written": {"const": 0}
+      }
+    }
+  }
+}

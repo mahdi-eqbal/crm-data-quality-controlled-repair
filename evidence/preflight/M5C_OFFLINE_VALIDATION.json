@@ -1,0 +1,35 @@
+{
+  "schema_version": "m5c-offline-validation-v1",
+  "milestone": "M5c",
+  "scope": "selected_non_personal_contact_property_history_correlation",
+  "live_hubspot_executed_in_builder_environment": false,
+  "evidence_source": "reconstructed_working_copy_and_synthetic_unit_tests",
+  "offline_tests_new": 36,
+  "offline_tests_in_reconstructed_checkout": 303,
+  "legacy_preexisting_tests_absent_from_reconstruction": 6,
+  "expected_tests_on_owner_checkout_if_unchanged": 309,
+  "safety_assertions": {
+    "crm_write_methods": 0,
+    "postgres_writes": 0,
+    "airtable_writes": 0,
+    "approvals": 0,
+    "baseline_reset": false,
+    "auth_scope_change": false
+  },
+  "api_implementation": {
+    "object_api_version": "2026-03",
+    "historical_fields": [
+      "hs_lastmodifieddate",
+      "lifecyclestage",
+      "hs_lead_status"
+    ],
+    "max_extra_gets": 1,
+    "max_gets_total": 14,
+    "max_history_versions_per_property": 100
+  },
+  "limitations": [
+    "Offline tests do not verify live account history availability or completeness.",
+    "No causal attribution is claimed from sourceType or temporal correlation.",
+    "Live Windows acceptance is required; no automatic baseline refresh."
+  ]
+}

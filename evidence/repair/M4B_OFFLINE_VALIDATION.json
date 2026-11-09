@@ -1,0 +1,30 @@
+{
+  "milestone": "M4b",
+  "source_type": "synthetic_fixture_only",
+  "validation_date": "2026-11-09",
+  "test_runner": "python -m unittest discover -s tests -q",
+  "preexisting_test_count": 147,
+  "new_test_count": 35,
+  "total_test_count": 182,
+  "unit_tests_status": "PASS",
+  "local_cli_checks": {
+    "check": "PASS",
+    "demo": "PASS (self-asserted fixture-only mock actor claims, not authenticated approvals)",
+    "report": "PASS (Git-ignored local JSON only)"
+  },
+  "approval_requests": 31,
+  "awaiting_independent_approval": 22,
+  "held_duplicate_dependency": 9,
+  "actual_approvals": 0,
+  "real_hubspot_preflights": 0,
+  "crm_writes": 0,
+  "postgres_writes": 0,
+  "airtable_writes": 0,
+  "merges": 0,
+  "notes": [
+    "Uses original deterministic synthetic fixtures and M4a repair planning contract.",
+    "Checks record/policy/association fingerprints and duplicate dependencies.",
+    "Demo approvals are simulated in memory using unauthenticated mock actors and grant no permissions.",
+    "This document is offline test evidence, not proof of live CRM safety or production readiness."
+  ]
+}

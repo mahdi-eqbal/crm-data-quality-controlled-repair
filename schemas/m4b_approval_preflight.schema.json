@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "M4b synthetic-only approval request plan; never CRM authorization",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "version", "source_type", "source_plan_sha256", "source_fingerprint", "policy_version", "policy_sha256", "counts", "requests", "non_goals", "guarantees", "gate_plan_sha256"],
+  "properties": {
+    "schema_version": {"const": "m4b-1"},
+    "version": {"const": "m4b-approval-preflight-design-v1"},
+    "source_type": {"const": "synthetic_fixture_only"},
+    "source_plan_sha256": {"$ref": "#/$defs/sha"},
+    "source_fingerprint": {"$ref": "#/$defs/sha"},
+    "policy_version": {"type": "string", "minLength": 1},
+    "policy_sha256": {"$ref": "#/$defs/sha"},
+    "counts": {
+      "type": "object", "additionalProperties": false,
+      "required": ["requests", "awaiting_independent_approval", "held_duplicate_dependency", "actual_approvals", "crm_write_eligible"],
+      "properties": {
+        "requests": {"const": 31},
+        "awaiting_independent_approval": {"const": 22},
+        "held_duplicate_dependency": {"const": 9},
+        "actual_approvals": {"const": 0},
+        "crm_write_eligible": {"const": 0}
+      }
+    },
+    "requests": {"type": "array", "minItems": 31, "maxItems": 31, "items": {"$ref": "#/$defs/request"}},
+    "non_goals": {"type": "array", "minItems": 5, "items": {"type": "string"}},
+    "guarantees": {
+      "type": "object", "additionalProperties": false,
+      "required": ["crm_writes", "airtable_writes", "postgres_writes", "merges", "approvals_granted"],
+      "properties": {
+        "crm_writes": {"const": 0}, "airtable_writes": {"const": 0},
+        "postgres_writes": {"const": 0}, "merges": {"const": 0}, "approvals_granted": {"const": 0}
+      }
+    },
+    "gate_plan_sha256": {"$ref": "#/$defs/sha"}
+  },
+  "$defs": {
+    "sha": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "uuid": {"type": "string", "format": "uuid"},
+    "request": {
+      "type": "object", "additionalProperties": false,
+      "required": ["request_id", "proposal_id", "source_type", "source_record_id", "object_type", "field", "old_value", "proposed_value", "risk", "status", "source_record_sha256", "source_modified_at", "associations_sha256", "association_count", "dependency_candidate_keys", "rollback_value", "source_plan_sha256", "source_fingerprint", "policy_version", "policy_sha256", "requires_separate_authorized_reviewer", "requires_fresh_hubspot_read_before_any_future_write", "approval_recorded", "write_authorized", "merge_authorized", "request_sha256"],
+      "properties": {
+        "request_id": {"$ref": "#/$defs/uuid"},
+        "proposal_id": {"$ref": "#/$defs/uuid"},
+        "source_type": {"const": "synthetic_fixture_only"},
+        "source_record_id": {"type": "string", "pattern": "^O[0-9]{4}$"},
+        "object_type": {"const": "company"}, "field": {"const": "country"},
+        "old_value": {"const": "United States"}, "proposed_value": {"const": "US"},
+        "risk": {"enum": ["low", "medium"]},
+        "status": {"enum": ["awaiting_independent_approval", "held_duplicate_dependency"]},
+        "source_record_sha256": {"$ref": "#/$defs/sha"},
+        "source_modified_at": {"type": "string", "format": "date-time"},
+        "associations_sha256": {"$ref": "#/$defs/sha"},
+        "association_count": {"type": "integer", "minimum": 0},
+        "dependency_candidate_keys": {"type": "array", "items": {"type": "string", "pattern": "^companies:O[0-9]{4}:O[0-9]{4}$"}},
+        "rollback_value": {"const": "United States"},
+        "source_plan_sha256": {"$ref": "#/$defs/sha"},
+        "source_fingerprint": {"$ref": "#/$defs/sha"},
+        "policy_version": {"type": "string", "minLength": 1},
+        "policy_sha256": {"$ref": "#/$defs/sha"},
+        "requires_separate_authorized_reviewer": {"const": true},
+        "requires_fresh_hubspot_read_before_any_future_write": {"const": true},
+        "approval_recorded": {"const": false},
+        "write_authorized": {"const": false},
+        "merge_authorized": {"const": false},
+        "request_sha256": {"$ref": "#/$defs/sha"}
+      }
+    }
+  }
+}

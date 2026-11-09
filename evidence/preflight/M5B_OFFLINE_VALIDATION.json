@@ -1,0 +1,14 @@
+{
+  "milestone": "M5b",
+  "date": "2026-11-09",
+  "test_scope": "isolated offline compatibility harness; real M5a integration and live test account acceptance remain pending",
+  "new_tests": 20,
+  "new_tests_passed": 20,
+  "expected_project_tests_if_previous_253_unchanged": 273,
+  "hubspot_gets_run_in_isolated_tests": 0,
+  "postgres_writes": 0,
+  "airtable_writes": 0,
+  "crm_writes": 0,
+  "merges": 0,
+  "note": "No cause of timestamp drift is inferred, and no automatic baseline refresh is permitted."
+}

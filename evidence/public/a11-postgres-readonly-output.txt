@@ -1,0 +1,14 @@
+BEGIN
+                   journal                   | events
+---------------------------------------------+--------
+ dispatch_reserved + outcome_uncertain       |      1
+ dispatch_reserved + processing_acknowledged |      4
+ pending                                     |      3
+(3 rows)
+
+ http_status |    decision_kind     | evidence_digest_matches
+-------------+----------------------+-------------------------
+         401 | close_without_replay | t
+(1 row)
+
+ROLLBACK
